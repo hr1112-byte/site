@@ -9,16 +9,24 @@
 <body>
   <header class="header">
     <div class="logo">合同会社 SOLIA</div>
-   <nav class="nav">
-   <a href="#about">ABOUT</a>
-   <a href="#service">SERVICE</a>
-   <a href="#flow">FLOW</a>
-   <a href="#entry">ENTRY</a>
-  </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#about">ABOUT</a>
+      <a href="#service">SERVICE</a>
+      <a href="#flow">FLOW</a>
+      <a href="#entry">ENTRY</a>
+    </nav>
   </header>
 
   <main>
     <section class="hero">
+      <div class="hero-overlay"></div>
       <div class="hero-inner">
         <p class="sub-copy">YOKOHAMA AREA</p>
         <h1>働き方に改革を。<br>時代に革命を。</h1>
@@ -26,7 +34,7 @@
           横浜を拠点に、軽貨物配送を中心とした事業を展開。<br>
           一人ひとりが自分らしく働ける環境づくりを目指しています。
         </p>
-        <a class="line-button" href="https://line.me/" target="_blank" rel="noopener noreferrer">
+        <a class="line-button hero-line" href="https://line.me/" target="_blank" rel="noopener noreferrer">
           LINEで応募する
         </a>
       </div>
@@ -79,6 +87,10 @@
       </div>
     </section>
   </main>
+
+  <a class="floating-line" href="https://line.me/" target="_blank" rel="noopener noreferrer">
+    LINE応募
+  </a>
 
   <footer class="footer">
     <p>合同会社 SOLIA</p>
