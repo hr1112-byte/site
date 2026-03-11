@@ -7,138 +7,175 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="logo">合同会社 SOLIA</div>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="logo">SOLIA</div>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <nav class="nav">
-    <a href="#about">ABOUT</a>
-    <a href="#service">SERVICE</a>
-    <a href="#flow">FLOW</a>
-    <a href="#company">COMPANY</a>
-    <a href="#contact">CONTACT</a>
-    </nav>
+      <nav class="nav" id="nav">
+        <a href="#about">ABOUT</a>
+        <a href="#service">SERVICE</a>
+        <a href="#flow">FLOW</a>
+        <a href="#company">COMPANY</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-overlay"></div>
       <div class="hero-inner">
-        <p class="sub-copy">YOKOHAMA AREA</p>
-        <h1>働き方に改革を。<br>時代に革命を。</h1>
-        <p class="main-copy">
-          横浜を拠点に、軽貨物配送を中心とした事業を展開。<br>
-          一人ひとりが自分らしく働ける環境づくりを目指しています。
+        <p class="hero-label">YOKOHAMA BASED</p>
+        <h1>
+          合同会社 SOLIA
+        </h1>
+        <p class="hero-text">
+          横浜を拠点とする軽貨物配送業。<br>
+          働き方に改革を、時代に革命を。
         </p>
-        <a class="line-button hero-line" href="https://line.me/" target="_blank" rel="noopener noreferrer">
-          LINEで応募する
-        </a>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="container">
-        <h2>ABOUT</h2>
-        <p>
-          合同会社 SOLIA は、横浜を拠点とする軽貨物配送事業者です。<br>
-          柔軟な働き方と、安心して挑戦できる環境づくりを大切にしています。
-        </p>
+      <div class="section-inner">
+        <p class="section-kicker">ABOUT</p>
+        <h2>事業の軸を、シンプルに。</h2>
+        <div class="glass-card single-card">
+          <p>
+            横浜を拠点とする軽貨物配送業。<br>
+            働き方に改革を時代に革命を。
+          </p>
+        </div>
       </div>
     </section>
 
-    <section id="service" class="section">
-      <div class="container">
-        <h2>SERVICE</h2>
-        <p>
-          ・軽貨物配送業務<br>
-          ・ドライバー業務<br>
-          ・軽作業スタッフ<br>
-          ・その他高収入案件多数
-        </p>
+    <section id="service" class="section alt">
+      <div class="section-inner">
+        <p class="section-kicker">SERVICE</p>
+        <h2>提供する業務内容</h2>
+        <div class="card-grid three-grid">
+          <div class="glass-card service-card">
+            <h3>ドライバー業務</h3>
+            <p>現場に応じた配送・運送業務に対応します。</p>
+          </div>
+          <div class="glass-card service-card">
+            <h3>軽作業スタッフ</h3>
+            <p>周辺業務を含めた柔軟なサポートを行います。</p>
+          </div>
+          <div class="glass-card service-card">
+            <h3>その他高収入案件</h3>
+            <p>事業内容に応じた各種案件に対応しています。</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="flow" class="section dark">
-      <div class="container">
-        <h2>FLOW</h2>
-        <p>
-          ① LINEからお問い合わせ<br>
-          ② ご希望や働き方の確認<br>
-          ③ 日程調整・ご案内<br>
-          ④ お仕事スタート
-        </p>
+    <section id="flow" class="section">
+      <div class="section-inner">
+        <p class="section-kicker">FLOW</p>
+        <h2>ご相談から開始まで</h2>
+        <div class="card-grid four-grid">
+          <div class="glass-card flow-card">
+            <span>01</span>
+            <h3>お問い合わせ</h3>
+            <p>まずはLINEよりご連絡ください。</p>
+          </div>
+          <div class="glass-card flow-card">
+            <span>02</span>
+            <h3>内容確認</h3>
+            <p>ご希望や条件を簡単に確認します。</p>
+          </div>
+          <div class="glass-card flow-card">
+            <span>03</span>
+            <h3>日程調整</h3>
+            <p>スムーズに開始できるよう調整します。</p>
+          </div>
+          <div class="glass-card flow-card">
+            <span>04</span>
+            <h3>お仕事スタート</h3>
+            <p>準備が整い次第、業務開始となります。</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="company" class="section">
-  <div class="container">
-    <h2>COMPANY</h2>
+    <section id="company" class="section alt">
+      <div class="section-inner">
+        <p class="section-kicker">COMPANY</p>
+        <h2>会社情報</h2>
 
-    <div class="company-table">
-
-      <div class="company-row">
-        <div class="company-title">会社名</div>
-        <div class="company-data">合同会社 SOLIA</div>
+        <div class="glass-card company-card">
+          <div class="company-row">
+            <div class="company-title">会社名</div>
+            <div class="company-data">合同会社 SOLIA</div>
+          </div>
+          <div class="company-row">
+            <div class="company-title">代表社員</div>
+            <div class="company-data">齋藤 亮</div>
+          </div>
+          <div class="company-row">
+            <div class="company-title">設立</div>
+            <div class="company-data">2026年</div>
+          </div>
+          <div class="company-row">
+            <div class="company-title">所在地</div>
+            <div class="company-data">神奈川県横浜市</div>
+          </div>
+          <div class="company-row">
+            <div class="company-title">対応エリア</div>
+            <div class="company-data">横浜市・川崎市・神奈川県全域</div>
+          </div>
+          <div class="company-row">
+            <div class="company-title">法人番号</div>
+            <div class="company-data">XXXXXXXXXXXXX</div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="company-row">
-        <div class="company-title">代表社員</div>
-        <div class="company-data">齋藤 亮</div>
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <p class="section-kicker">CONTACT</p>
+        <h2>ご連絡先</h2>
+
+        <div class="glass-card contact-card">
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">TEL</span>
+              <span class="contact-value">070-4539-4597</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">MAIL</span>
+              <span class="contact-value">solia.2026.0213@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">代表社員</span>
+              <span class="contact-value">齋藤 亮</span>
+            </div>
+          </div>
+
+          <a class="line-button" href="https://line.me/" target="_blank" rel="noopener noreferrer">
+            LINEでお問い合わせ
+          </a>
+        </div>
       </div>
-
-      <div class="company-row">
-        <div class="company-title">設立</div>
-        <div class="company-data">2026年</div>
-      </div>
-
-      <div class="company-row">
-        <div class="company-title">所在地</div>
-        <div class="company-data">神奈川県横浜市</div>
-      </div>
-
-      <div class="company-row">
-        <div class="company-title">対応エリア</div>
-        <div class="company-data">横浜市・川崎市・神奈川県全域</div>
-      </div>
-
-      <div class="company-row">
-        <div class="company-title">法人番号</div>
-        <div class="company-data">XXXXXXXXXXXXX</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <section id="contact" class="section dark">
-  <div class="container">
-    <h2>CONTACT</h2>
-    <p>
-      TEL：070-4539-4597<br>
-      MAIL：solia.2026.0213@gmail.com<br>
-      代表社員：齋藤 亮
-    </p>
-
-    <a class="line-button" href="https://line.me/" target="_blank">
-      LINEでお問い合わせ
-    </a>
-  </div>
-</section>
+    </section>
   </main>
 
   <a class="floating-line" href="https://line.me/" target="_blank" rel="noopener noreferrer">
-    LINE応募
+    LINEで相談
   </a>
 
   <footer class="footer">
-    <p>合同会社 SOLIA</p>
-    <p>横浜を拠点とする軽貨物配送事業</p>
-    <p>© 2026 合同会社 SOLIA</p>
+    <div class="footer-inner">
+      <p>合同会社 SOLIA</p>
+      <p>© 2026 SOLIA LLC. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
