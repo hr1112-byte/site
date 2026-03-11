@@ -78,10 +78,23 @@ a {
   align-items: center;
   justify-content: center;
   padding: 120px 24px 80px;
-  background-image: url("https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(
+    135deg,
+    #050506 0%,
+    #0f172a 40%,
+    #111827 70%,
+    #020617 100%
+  );
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(99,102,241,0.15),
+    transparent 40%
+  );
 }
 
 .hero-overlay {
