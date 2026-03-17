@@ -95,3 +95,7 @@ html {
 iframe {
   border-radius: 10px;
 }
+/* COMPANY以外は中央揃え */
+.section:not(:has(.company-info)) .card {
+  text-align: center;
+}
