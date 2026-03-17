@@ -1,441 +1,68 @@
+/* ===== リセット ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #f5f5f7;
-  --text: #1d1d1f;
-  --sub: #6e6e73;
-  --line: rgba(0, 0, 0, 0.08);
-  --white: #ffffff;
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-  --radius: 28px;
-  --max: 1200px;
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
 }
 
+/* ===== ヘッダー分の高さ調整 ===== */
+:root {
+  --header-height: 80px;
+}
+
+/* ===== スクロール設定 ===== */
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Hiragino Sans",
-    "Yu Gothic", sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,0.9), rgba(245,245,247,1) 45%),
-    linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 100%);
-  color: var(--text);
-  line-height: 1.6;
+/* ===== セクション ===== */
+.section, .hero {
+  height: calc(100vh - var(--header-height));
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.header.scrolled {
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.header-inner {
-  max-width: var(--max);
+/* ===== 中身中央寄せ ===== */
+.section-inner {
+  width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 18px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.logo {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
-
-.nav a {
-  font-size: 13px;
-  color: var(--text);
-  letter-spacing: 0.08em;
-  opacity: 0.86;
-  transition: opacity 0.25s ease;
-}
-
-.nav a:hover {
-  opacity: 1;
-}
-
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px 0;
-  border-radius: 999px;
-}
-
+/* ===== hero（表紙） ===== */
 .hero {
-  padding: 180px 24px 110px;
-}
-
-.hero-inner {
-  max-width: 980px;
-  margin: 0 auto;
   text-align: center;
 }
 
 .hero-label {
-  color: var(--sub);
-  font-size: 13px;
-  letter-spacing: 0.16em;
-  margin-bottom: 18px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: 0.6;
 }
 
 .hero h1 {
-  font-size: clamp(42px, 8vw, 88px);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
-  font-weight: 700;
-  margin-bottom: 22px;
+  font-size: 64px;
+  letter-spacing: 4px;
+  margin: 20px 0;
 }
 
 .hero-text {
-  max-width: 760px;
-  margin: 0 auto;
-  font-size: clamp(18px, 2.4vw, 26px);
-  color: var(--sub);
-  line-height: 1.5;
-}
-
-.section {
-  padding: 42px 24px 90px;
-}
-
-.section.alt {
-  background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.4));
-}
-
-.section-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-}
-
-.section-kicker {
-  text-align: center;
-  color: var(--sub);
-  font-size: 13px;
-  letter-spacing: 0.16em;
-  margin-bottom: 14px;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: clamp(30px, 5vw, 56px);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  margin-bottom: 34px;
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.75);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.single-card {
-  padding: 42px 32px;
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.single-card p {
-  font-size: 20px;
-  color: var(--sub);
-}
-
-.card-grid {
-  display: grid;
-  gap: 22px;
-}
-
-.three-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.four-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.service-card,
-.flow-card {
-  padding: 30px 24px;
-  min-height: 220px;
-}
-
-.service-card h3,
-.flow-card h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
-  letter-spacing: -0.02em;
-}
-
-.service-card p,
-.flow-card p {
-  font-size: 16px;
-  color: var(--sub);
-}
-
-.flow-card span {
-  display: inline-block;
-  font-size: 13px;
-  color: var(--sub);
-  margin-bottom: 12px;
-  letter-spacing: 0.12em;
-}
-
-.company-card {
-  max-width: 940px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.company-row {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 20px;
-  padding: 22px 28px;
-  border-bottom: 1px solid var(--line);
-}
-
-.company-row:last-child {
-  border-bottom: none;
-}
-
-.company-title {
-  color: var(--sub);
   font-size: 14px;
-  letter-spacing: 0.08em;
-}
-
-.company-data {
-  font-size: 17px;
-}
-
-.contact-card {
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 34px 28px;
-}
-
-.contact-list {
-  display: grid;
-  gap: 18px;
-  margin-bottom: 30px;
-}
-
-.contact-item {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line);
-}
-
-.contact-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.contact-label {
-  color: var(--sub);
-  font-size: 14px;
-  letter-spacing: 0.08em;
-}
-
-.contact-value {
-  font-size: 17px;
-  word-break: break-word;
-}
-
-.line-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 28px;
-  border-radius: 999px;
-  background: #111111;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.line-button:hover {
-  transform: translateY(-1px);
-  opacity: 0.92;
-}
-
-.floating-line {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 1001;
-  background: #111111;
-  color: #ffffff;
-  border-radius: 999px;
-  padding: 14px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-}
-
-.footer {
-  padding: 40px 24px 60px;
-}
-
-.footer-inner {
-  max-width: var(--max);
-  margin: 0 auto;
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  color: var(--sub);
-  font-size: 14px;
-}
-
-@media (max-width: 980px) {
-  .three-grid,
-  .four-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 16px 18px;
-  }
-
-  .menu-toggle {
-    display: block;
-    z-index: 1002;
-  }
-
-  .nav {
-    display: none;
-    position: absolute;
-    top: 68px;
-    right: 18px;
-    width: 220px;
-    padding: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    background: rgba(255,255,255,0.94);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .hero {
-    padding: 150px 18px 80px;
-  }
-
-  .section {
-    padding: 26px 18px 70px;
-  }
-
-  .single-card {
-    padding: 30px 22px;
-  }
-
-  .single-card p {
-    font-size: 17px;
-  }
-
-  .three-grid,
-  .four-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card,
-  .flow-card {
-    min-height: auto;
-  }
-
-  .company-row,
-  .contact-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .contact-card {
-    padding: 26px 20px;
-  }
-
-  .floating-line {
-    right: 14px;
-    bottom: 14px;
-    padding: 12px 16px;
-    font-size: 13px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-  }
-}
-/* ===== 1ページスクロール ===== */
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-.section, .hero {
-  height: 100vh;
-  scroll-snap-align: start;
+  opacity: 0.7;
 }
 
 /* ===== アニメーション ===== */
 .section, .hero-inner {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(40px);
   transition: 0.8s ease;
 }
 
@@ -443,12 +70,21 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ===== スクロール表示 ===== */
 .scroll-indicator {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 20px;
   font-size: 12px;
-  letter-spacing: 2px;
-  opacity: 0.6;
+  opacity: 0.5;
+}
+
+/* ===== ヘッダー固定 ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+  background: rgba(255,255,255,0.9);
 }
