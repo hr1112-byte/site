@@ -46,58 +46,52 @@ html {
 /* 中央 */
 .hero-inner, .section-inner {
   text-align: center;
+  width: 90%;
+  max-width: 800px;
 }
 
 /* 表紙 */
-.hero-label {
-  font-size: 12px;
-  letter-spacing: 3px;
-  opacity: 0.6;
-}
-
 .hero h1 {
   font-size: 72px;
-  letter-spacing: 5px;
   margin: 20px 0;
 }
 
-.hero-text {
-  font-size: 16px;
-  opacity: 0.7;
+/* カード */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-top: 20px;
+  text-align: left;
 }
 
-/* セクション */
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+/* 会社情報 */
+.company-info p {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.company-info span {
+  min-width: 120px;
+  font-weight: bold;
 }
 
 /* アニメーション */
-.hero-inner, .section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.8s;
-}
-
-.hero-inner.active, .section.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-iframe {
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-/* 初期状態 */
 .fade-up {
   opacity: 0;
   transform: translateY(60px);
-  transition: all 0.8s ease;
+  transition: 0.8s;
 }
 
-/* 表示されたら */
 .fade-up.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* マップ */
+iframe {
+  border-radius: 10px;
 }
