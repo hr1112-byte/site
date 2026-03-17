@@ -88,3 +88,16 @@ iframe {
   margin-top: 20px;
   border-radius: 10px;
 }
+
+/* 初期状態 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+/* 表示されたら */
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}

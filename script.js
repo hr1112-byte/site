@@ -1,4 +1,4 @@
-const targets = document.querySelectorAll('.hero-inner, .section');
+const targets = document.querySelectorAll('.fade-up');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -7,7 +7,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.3
+  threshold: 0.2
 });
 
 targets.forEach(target => {
