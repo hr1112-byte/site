@@ -19,3 +19,18 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+const targets = document.querySelectorAll('.section, .hero-inner');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+targets.forEach(target => {
+  observer.observe(target);
+});

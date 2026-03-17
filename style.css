@@ -421,3 +421,34 @@ a {
     flex-direction: column;
   }
 }
+/* ===== 1ページスクロール ===== */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section, .hero {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+/* ===== アニメーション ===== */
+.section, .hero-inner {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+
+.section.active, .hero-inner.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
