@@ -1,4 +1,4 @@
-const targets = document.querySelectorAll('.section, .hero-inner');
+const targets = document.querySelectorAll('.hero-inner, .section');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
