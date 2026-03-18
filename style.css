@@ -67,3 +67,8 @@ body {
   text-decoration: none;
   border-radius: 5px;
 }
+
+.card p {
+  line-height: 1.8;
+  font-size: 15px;
+}
