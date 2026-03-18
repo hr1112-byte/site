@@ -72,3 +72,21 @@ body {
   line-height: 1.8;
   font-size: 15px;
 }
+
+.flow p {
+  margin-bottom: 20px;
+}
+
+.flow strong {
+  font-size: 16px;
+}
+
+.flow-note {
+  font-size: 13px;
+  color: #777;
+}
+
+.card p {
+  line-height: 1.8;
+  font-size: 15px;
+}
