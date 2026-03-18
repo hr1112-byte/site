@@ -24,10 +24,9 @@ body {
 
 /* TOP */
 .hero {
-  background: #000;
+  background: linear-gradient(135deg, #000, #333);
   color: #fff;
 }
-
 .hero h1 {
   font-size: 40px;
 }
