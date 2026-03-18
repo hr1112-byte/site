@@ -90,3 +90,29 @@ body {
   line-height: 1.8;
   font-size: 15px;
 }
+
+.service-box p {
+  margin-bottom: 15px;
+}
+
+.strength-box p {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.flow-card {
+  margin-top: 30px;
+}
+
+.flow p {
+  margin-bottom: 20px;
+}
+
+.flow strong {
+  font-size: 16px;
+}
+
+.flow-note {
+  font-size: 13px;
+  color: #777;
+}
