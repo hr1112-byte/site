@@ -364,3 +364,47 @@ body {
   font-size: 14px;
   line-height: 1.6;
 }
+/* ===== 豪華な会社概要BOX ===== */
+
+.company-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  /* グラデーション枠 */
+  border: 1px solid transparent;
+  background-image: 
+    linear-gradient(#fff, #fff), 
+    linear-gradient(135deg, #999, #333);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* 影で浮かせる */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+  position: relative;
+}
+.company-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+
+  /* 上にライン入れる */
+  background: linear-gradient(90deg, #000, #666);
+
+  border-radius: 15px 15px 0 0;
+}
+.company-table th {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.company-table td {
+  font-size: 15px;
+}
